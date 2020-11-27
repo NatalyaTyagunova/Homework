@@ -1,0 +1,37 @@
+package Lessons1;
+
+public class quest8 {
+
+    public static void main(String[] args) {
+        printbissextile(2020);
+        printbissextile(1000);
+        printbissextile(1997);
+
+    }
+
+
+    public static void printbissextile(int year) {
+        boolean bissextile = bissextileYear (year);
+        if (bissextile) {
+            System.out.println(year + " - високосный");
+        }
+
+        else {
+            System.out.println(year + " - не високосный");
+        }
+
+    }
+
+    public static boolean  bissextileYear (int year) {
+        if (year % 400 == 0) {
+            return true;
+        }
+
+        if (year % 100 == 0) {
+            return false;
+        }
+            return year % 4 == 0;
+        }
+
+
+}
